@@ -1,0 +1,49 @@
+\newcommand{\AWS}{\ac{AWS}}
+\newcommand{\nzitat}{${}^{,}$}
+
+\newcommand{\TodoW}[1]{
+\PackageWarning{Todos}{Todo-#1} 
+\Todo{#1}
+}
+
+\newcommand{\anhangref}[1]{Anhang~\ref{#1}}
+
+% \renewcommand{\clearpage}{}
+\renewcommand*{\lstlistingname}{Codebeispiel}
+
+%from https://groups.google.com/g/comp.text.tex/c/dOHk1iL9VKs/m/z7Yl8Kd0NUoJ - \hlinewd
+\makeatletter
+\def\hlinewd#1{%
+\noalign{\ifnum0=`}\fi\hrule \@height #1 \futurelet
+\reserved@a\@xhline}
+\makeatother
+
+
+\providecommand\phantomsection{}
+
+% Siehe https://golatex.de/viewtopic.php?t=17077
+\makeatletter
+\newcommand{\textlabel}[2]{
+  \protected@edef\@currentlabel{#2}
+  \phantomsection
+  #1\label{#2}
+}
+\makeatother
+
+\newcommand{\englishquote}[1]{$\lbrack$\textit{#1}$\rbrack$}
+
+
+\newcommand{\miniabschnitt}[1]{
+% \pdfbookmark[3]{#1}{miniabschnitt:\arabic{chapter}-\arabic{section}-\arabic{subsection}:#1}
+\textbf{#1}\hfill\break\noindent
+}
+
+\newcommand{\miniabschnittl}[2]{
+% \pdfbookmark[3]{#1}{miniabschnitt:\arabic{chapter}-\arabic{section}-\arabic{subsection}:#1}
+\textbf{#1}\label{#2}\hfill\break\noindent
+}
+
+
+
+
+
